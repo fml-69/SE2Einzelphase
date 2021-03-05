@@ -10,6 +10,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     private Button sendBtn;
     private Button extraTaskBtn;
+    private TextView headingText;
     private TextView outputText;
     private EditText inputValue;
     private Networker networker;
@@ -31,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
                     catch(Exception e){
                         e.printStackTrace();
                     }
+                    headingText = findViewById(R.id.outputHeading);
+                    headingText.setText(getResources().getString(R.string.server_output_heading));
                     outputText = findViewById(R.id.outputText);
                     outputText.setText(networker.getOutputString());
                 }
@@ -47,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
                     catch(Exception e){
                         e.printStackTrace();
                     }
+                    headingText = findViewById(R.id.outputHeading);
+                    headingText.setText(getResources().getString(R.string.local_output_heading));
                     outputText = findViewById(R.id.outputText);
                     outputText.setText(numberWorker.getOutputString());
                 }

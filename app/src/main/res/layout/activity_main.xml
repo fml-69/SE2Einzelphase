@@ -11,7 +11,7 @@
         android:id="@+id/enterNumberHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="88dp"
         android:focusable="false"
         android:text="@string/enter_number_heading"
         android:textSize="18sp"
@@ -24,14 +24,18 @@
         android:id="@+id/inputNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
         android:autofillHints="@string/number_input_hint"
         android:ems="10"
         android:hint="@string/number_input_hint"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/serverOutputHeading"
+        app:layout_constraintBottom_toTopOf="@+id/outputHeading"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enterNumberHeading" />
+        app:layout_constraintTop_toBottomOf="@+id/enterNumberHeading"
+        app:layout_constraintVertical_bias="0.352" />
 
     <Button
         android:id="@+id/sendToServer"
@@ -56,23 +60,24 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/serverOutputHeading"
+        android:id="@+id/outputHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
+        android:layout_marginTop="116dp"
         android:focusable="false"
-        android:text="@string/server_output_heading"
+        android:paddingLeft="32sp"
+        android:paddingRight="32sp"
+        android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/outputText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterNumberHeading" />
 
     <TextView
         android:id="@+id/outputText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
         android:focusable="false"
         android:paddingLeft="32sp"
         android:paddingRight="32sp"
@@ -80,7 +85,9 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/sendToServer"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outputHeading"
+        app:layout_constraintVertical_bias="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,5 +4,6 @@
     <string name="number_input_hint">Matrikelnummer</string>
     <string name="button_text_send_to_server">ABSCHICKEN</string>
     <string name="server_output_heading">Antwort vom Server:</string>
+    <string name="local_output_heading">Eingabe sortiert nach geraden und ungeraden Zahlen - aufsteigend:</string>
     <string name="button_text_extra_task">Extra Task!</string>
 </resources>
