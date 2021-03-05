@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SE2Einzelphase</string>
+    <string name="enter_number_heading"> Gib deine Matrikelnummer ein:</string>
+    <string name="number_input_hint">Matrikelnummer</string>
+    <string name="button_text">ABSCHICKEN</string>
+    <string name="server_output_heading">Antwort vom Server:</string>
 </resources>
