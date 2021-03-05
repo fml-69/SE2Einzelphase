@@ -8,10 +8,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    Button sendBtn;
-    TextView outputText;
-    EditText inputValue;
-    Networker networker;
+    private Button sendBtn;
+    private Button extraTaskBtn;
+    private TextView outputText;
+    private EditText inputValue;
+    private Networker networker;
+    private NumberWorker numberWorker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,22 @@ public class MainActivity extends AppCompatActivity {
                     }
                     outputText = findViewById(R.id.outputText);
                     outputText.setText(networker.getOutputString());
+                }
+        );
+        extraTaskBtn = findViewById(R.id.executeExtraTask);
+        extraTaskBtn.setOnClickListener(
+                v -> {
+                    inputValue = findViewById(R.id.inputNumber);
+                    numberWorker = new NumberWorker(inputValue.getText().toString());
+                    numberWorker.start();
+                    try{
+                        numberWorker.join();
+                    }
+                    catch(Exception e){
+                        e.printStackTrace();
+                    }
+                    outputText = findViewById(R.id.outputText);
+                    outputText.setText(numberWorker.getOutputString());
                 }
         );
     }

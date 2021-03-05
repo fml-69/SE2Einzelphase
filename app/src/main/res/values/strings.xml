@@ -2,7 +2,7 @@
     <string name="app_name">SE2Einzelphase</string>
     <string name="enter_number_heading"> Gib deine Matrikelnummer ein:</string>
     <string name="number_input_hint">Matrikelnummer</string>
-    <string name="button_text">ABSCHICKEN</string>
+    <string name="button_text_send_to_server">ABSCHICKEN</string>
     <string name="server_output_heading">Antwort vom Server:</string>
-    <string name="extra_task_heading">Zusatzaufgabe - Zahlen in gerade und ungerade aufgeteilt und Sortiert:</string>
+    <string name="button_text_extra_task">Extra Task!</string>
 </resources>

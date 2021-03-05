@@ -6,12 +6,12 @@ import java.io.InputStreamReader;
 import java.net.Socket;
 
 public class Networker extends Thread{
-    String inputString;
-    String outputString;
+    private String inputString;
+    private String outputString;
 
-    Socket clientSocket;
-    DataOutputStream outToServer;
-    BufferedReader inFromServer;
+    private Socket clientSocket;
+    private DataOutputStream outToServer;
+    private BufferedReader inFromServer;
 
     public Networker(String in){
         this.inputString = in;
